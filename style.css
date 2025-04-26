@@ -111,13 +111,16 @@ body {
    
   .challenge-box {
     background-color: white;
-    padding: 10px;
-    margin: 20px;
+    padding: 10px 20px;
+    margin: 20px auto;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     text-align: center;
     font-weight: bold;
+    max-width: 500px; /* <<< NEW: allows it to stretch wider! */
+    width: 25%; /* <<< NEW: makes it flexible */
   }
+  
   
   .achievement-popup {
     position: fixed;
@@ -147,5 +150,42 @@ body {
   
   .achievement-popup.show {
     animation: bounceIn 0.6s ease;
+  }
+  .top-left-corner {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 100;
+  }
+  
+  .coming-soon {
+    background-color: #f5f5f5;
+    color: #555;
+    width: 180px;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    text-align: center;
+  }
+  
+  .coming-soon h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .disabled-link {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 12px;
+    background-color: #cccccc;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    cursor: not-allowed;
+    opacity: 0.7;
+  }
+  
+  .disabled-link:hover {
+    background-color: #cccccc;
   }
   
