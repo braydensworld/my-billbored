@@ -1,0 +1,155 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+  
+.todo-container {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    width: 300px;
+}
+  
+h1 {
+    text-align: center;
+}
+  
+.input-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+  
+#task-input, #priority-input, #date-input {
+    flex-grow: 1;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+#add-task {
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+}
+  
+#add-task:hover {
+    background-color: #45a049;
+}
+  
+#task-list {
+    list-style: none;
+    padding: 0;
+}
+  
+.task {
+    background: #050000;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+  
+.task.done {
+    text-decoration: line-through;
+    color: gray;
+}
+  
+.delete-btn {
+    background: red;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 5px 8px;
+    cursor: pointer;
+} 
+
+.priority-low {
+    background-color: #20b543; /* Light green */
+}
+
+.priority-medium {
+    background-color: #f7be05; /* Light yellow */
+}
+
+.priority-high {
+    background-color: #f40519; /* Light red */
+}
+
+@keyframes flashGreen {
+    0% { background-color: #90ee90; }
+    100% { background-color: #f9f9f9; }
+}
+  
+.flash-green {
+    animation: flashGreen 1s ease forwards;
+}
+
+.clear-section {
+    text-align: center;
+    margin-top: 10px;
+}
+
+#clear-tasks, #toggle-dark-mode {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: #f44336;
+    color: white;
+    cursor: pointer;
+    margin: 5px;
+}
+
+#toggle-dark-mode {
+    background-color: #333;
+}
+
+#clear-tasks:hover {
+    background-color: #d32f2f;
+}
+
+#toggle-dark-mode:hover {
+    background-color: #555;
+}
+
+/* 🌙 Dark mode styles */
+body.dark-mode {
+    background-color: #121212;
+}
+
+.todo-container.dark-mode {
+    background-color: #1e1e1e;
+    color: white;
+}
+/* 🌟 Navigation Bar Styles */
+.navbar {
+    background-color: #333;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+  }
+  
+  .navbar a {
+    color: white;
+    padding: 12px 20px;
+    text-decoration: none;
+    font-size: 18px;
+    transition: background-color 0.3s;
+  }
+  
+  .navbar a:hover {
+    background-color: #575757;
+    border-radius: 8px;
+  }
+  
