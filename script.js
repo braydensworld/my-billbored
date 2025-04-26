@@ -29,21 +29,13 @@ const challenges = [
   function unlockAchievement(name) {
     const achievement = document.getElementById('achievement-popup');
     achievement.innerText = "🏆 Achievement Unlocked: " + name;
+    achievement.classList.add('show');
     achievement.style.display = 'block';
   
     setTimeout(() => {
+      achievement.classList.remove('show');
       achievement.style.display = 'none';
     }, 3000); // Hide after 3 seconds
   }
   
-  // Show challenge when page loads
-  window.onload = () => {
-    showDailyChallenge();
-  };
-  
-  // Attach openProject() to your project buttons!
-  const projectButtons = document.querySelectorAll('.open-project-btn');
-  projectButtons.forEach(button => {
-    button.addEventListener('click', openProject);
-  });
   
